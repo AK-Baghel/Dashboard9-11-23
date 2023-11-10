@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+}
+
+.headerContainer {
+    user-select: none;
+    width: 100vw;
+}
+
+.active {
+    color: red;
+}
+
+.headerItems {
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    gap: 2rem;
+    background-color: #72b1ec;
+    color: black;
+    padding: 1rem 1.3rem;
+    font-size: 1.1rem;
+    align-items: center;
+    height: 10vh;
+}
+
+.headerLogo {
+    font-weight: 700;
+    /* cursor: pointer; */
+    letter-spacing: 5px;
+    /* transition: all 0.2s ease; */
+}
+
+/* .headerLogo:hover {
+    color: blue;
+} */
+
+.headerAllItem {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 1s ease;
+    height: fit-content;
+    padding: 8px 0px 0px 0px;
+}
+
+.headerItem {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    /* text-align: center; */
+}
+
+.headerItem:hover {
+    color: rgb(66, 64, 64);
+}
+
+.headerCall {
+    color: greenyellow;
+}
+
+.headerBar {
+    display: none;
+    font-size: 2rem;
+    position: absolute;
+    right: 2.5vw;
+    top: 2.7vh;
+    color: white;
+    cursor: pointer;
+}
+
+.headerCross {
+    font-size: 3rem;
+    top: 1.6vh;
+    right: 1.5vw;
+}
+
+.headerDropDown {
+    font-size: 2rem;
+}
+
+.headerDrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerPopUpBox {
+    position: absolute;
+    top: 3rem;
+    color: rgb(255, 255, 255);
+    /* background-color: yellow; */
+    padding-top: 1.5rem;
+    width: 100vw;
+    left: 0rem;
+    animation: myAnim 0.5s ease 0s 1 normal forwards;
+    z-index: 9;
+}
+
+.headerPopUpBoxItems {
+    background-color: blueviolet;
+    padding: 1rem 1rem;
+    overflow: hidden;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.headerPopUpBoxItem {
+    width: fit-content;
+    height: fit-content;
+    font-size: 0.9rem;
+    margin-inline: 10px;
+    margin-block: 10px;
+}
+
+
+/* Header Vertical Toggle  */
+.headerVerticalToggle {
+    background-color: rgb(152, 194, 233);
+    display: flex;
+
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+
+.headerVerticalToggles {
+    padding: 5px 15px;
+    cursor: pointer;
+    transform: all 0.5s ease;
+}
+
+
+.headerVerticalToggleActive {
+    color: red;
+    background-color: #72b1ec;
+    transform: all 0.5s ease;
+    border-radius: 20px;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.headerFlag {
+    width: 30px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid rgb(168, 168, 168);
+    margin: auto;
+    animation: rotateY 1.5s infinite linear;
+}
+
+@keyframes rotateY {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+@media (max-width:931px) {
+    .headerItems {
+        flex-direction: column;
+        height: 10vh;
+    }
+
+    .headerLogo {
+        color: black;
+    }
+
+    .headerVerticalToggles {
+        color: black;
+    }
+
+    .headerVerticalToggleActive {
+        color: red;
+    }
+
+    .headerAllItem {
+        /* height: 85vh; */
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        position: absolute;
+        background-color: #2929298e;
+        color: rgb(255, 255, 255);
+        width: 100%;
+        left: 0;
+        top: 10vh;
+        min-height: 90vh;
+        padding: 2rem 2rem;
+        z-index: 99;
+    }
+
+    .headerMobile {
+        transform: translateX(-60rem);
+        transition: all 1s ease;
+    }
+
+    .headerItem {
+        text-align: left;
+    }
+
+    .headerBar {
+        display: block;
+    }
+
+    .headerCall {
+        color: rgb(238, 255, 4);
+    }
+
+    .headerPopUpBox {
+        position: static;
+        color: rgb(255, 255, 255);
+        /* background-color: yellow; */
+        padding: 0rem;
+        margin-right: 5rem;
+        margin: -1rem 5rem -1rem 0rem;
+        width: 80vw;
+        animation: none;
+    }
+
+    .headerPopUpBoxItems {
+        background-color: blueviolet;
+        padding: 1rem 2rem;
+        width: 80vw;
+    }
+
+    .headerPopUpBoxItems {
+        background-color: blueviolet;
+        padding: 1rem 1rem;
+        overflow: scroll;
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .headerPopUpBoxItem {
+        width: fit-content;
+        height: fit-content;
+        font-size: 0.9rem;
+        margin-inline: 10px;
+        margin-block: 10px;
+    }
+
+    .headerLeft {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+}
+
+
+
+
+@keyframes myAnim {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+        transform: translateY(45px);
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    40% {
+        animation-timing-function: ease-in;
+        transform: translateY(24px);
+    }
+
+    65% {
+        animation-timing-function: ease-in;
+        transform: translateY(12px);
+    }
+
+    82% {
+        animation-timing-function: ease-in;
+        transform: translateY(6px);
+    }
+
+    93% {
+        animation-timing-function: ease-in;
+        transform: translateY(4px);
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+        animation-timing-function: ease-out;
+        transform: translateY(0px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

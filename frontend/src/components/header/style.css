@@ -17,7 +17,8 @@ body {
 }
 
 .active {
-    color: red;
+    /* color: red; */
+    color: pink;
 }
 
 .headerItems {
@@ -25,8 +26,10 @@ body {
     justify-content: space-between;
     /* justify-content: space-around; */
     gap: 2rem;
-    background-color: #72b1ec;
-    color: black;
+    /* background-color: #72b1ec; */
+    background-color: #1F2940;
+    /* color: black; */
+    color: white;
     padding: 1rem 1.3rem;
     font-size: 1.1rem;
     align-items: center;
@@ -62,7 +65,7 @@ body {
 }
 
 .headerItem:hover {
-    color: rgb(66, 64, 64);
+    color: rgb(99, 0, 197);
 }
 
 .headerCall {
@@ -129,7 +132,8 @@ body {
 
 /* Header Vertical Toggle  */
 .headerVerticalToggle {
-    background-color: rgb(152, 194, 233);
+    /* background-color: rgb(152, 194, 233); */
+    background-color: #141B2D;
     display: flex;
 
     padding: 5px 10px;

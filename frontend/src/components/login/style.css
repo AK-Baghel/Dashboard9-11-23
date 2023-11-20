@@ -38,6 +38,8 @@
 .loginUser {
     background-color: white;
     display: flex;
+    justify-content: center;
+    align-items: center;
     color: black;
     width: 20rem;
 }
@@ -45,6 +47,7 @@
 .loginInput {
     width: 19rem;
     outline: none;
+    padding: 0.5rem;
     /* height: ; */
 
 }
@@ -52,4 +55,20 @@
 .loginRememberBox {
     display: flex;
     gap: 0.5rem;
+}
+
+.loginIcon {
+    margin: 0.5rem;
+}
+
+.loginButton {
+    background-color: rgb(201, 64, 255);
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.loginButton:hover {
+    background-color: rgb(209, 98, 253);
+
 }

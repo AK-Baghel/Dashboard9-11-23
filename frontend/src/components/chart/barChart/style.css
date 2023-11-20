@@ -1,0 +1,29 @@
+.apexcharts-reset-icon {
+    margin-left: 5px;
+    /* display: none; */
+}
+
+.apexcharts-element-hidden {
+    display: none;
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-pan-icon {
+    display: none;
+}
+
+
+
+.chartContainer {
+    /* background-color: pink; */
+    /* color: white; */
+    /* padding: 1rem; */
+    /* background-color: #141B2D; */
+    margin-top: 3rem;
+}
+
+.chart {
+    /* background-color: #1F2940; */
+    background-color: #1F2940;
+
+}

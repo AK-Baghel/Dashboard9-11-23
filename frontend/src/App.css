@@ -1,6 +1,6 @@
 .appRight {
 
-    color: black;
+    background-color: #141B2D;
     font-size: 4rem;
     height: 90vh;
     position: relative;
@@ -9,3 +9,20 @@
     width: 84vw;
     left: 16vw;
 }
+
+.appLeft {
+    background-color: #141B2D;
+    font-size: 4rem;
+    height: 90vh;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100vw;
+    /* left: 5vw; */
+
+}
+
+/* .appRight::-webkit-scrollbar {
+    background-color: #1F2940;
+    width: 10px;
+} */

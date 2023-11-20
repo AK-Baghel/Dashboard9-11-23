@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import "./style.css"
 import { FaBars } from "react-icons/fa6"
 // import { RiArrowDropDownLine } from "react-icons/ri"
@@ -7,8 +7,10 @@ import { FaUserAlt } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
 import { useNavigate } from "react-router-dom"
 import { useLocation } from "react-router-dom"
+import { Context } from "../../context/AppContext"
 
 const Header = () => {
+
     const location = useLocation();
     const [show, setShow] = useState(true);
     const [popUp, setPopUp] = useState(false);

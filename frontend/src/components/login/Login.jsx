@@ -15,7 +15,7 @@ function Login({ checkLogin }) {
     const [password, setPassword] = useState("")
 
     const signIn = async () => {
-        const data = await fetch("https://dashboard9-11-23.vercel.app//signin", {
+        const data = await fetch("http://localhost:8080/signin", {
             method: "post",
             body: JSON.stringify({ login, password }),
             headers: {

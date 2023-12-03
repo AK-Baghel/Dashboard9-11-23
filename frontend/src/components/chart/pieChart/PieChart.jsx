@@ -1,25 +1,27 @@
 import React from 'react'
 import Chart from "react-apexcharts";
-function PieChart() {
+function PieChart({ toggleMenu }) {
     return (
         <div className="chartContainer">
             <Chart
                 type="pie"
-                width={330}
-                height={330}
+                width={toggleMenu ? 450 : 500}
+                height={toggleMenu ? 400 : 450}
 
-
-
-                series={[10, 29, 3, 1, 12, 20]}
+                series={[76, 57, 56, 61, 76, 85, 85, 45, 57, 56, 61]}
 
                 options={{
                     title: {
-                        text: "PieChart",
-                        style: { color: "white" }
+                        text: "Type Of Grievance ",
+
+                        align: "center",
+                        // fontSize: "4"
+
+                        style: { fontSize: 13, color: "white" },
                     },
                     noData: { text: "Empty Data" },
                     // colors: ["#f90000", "#f0f"],
-                    labels: ['Hindi', 'English', 'Math', 'Physics', 'Chemistry', 'Java'],
+                    labels: ['PF', 'ESI', 'Wages/Incentive', 'Attendance', 'Workplace Stress', 'Supervisor Behaviour', 'Health & Safety', 'Job Assignment', 'Complaint Again Co-Workers', 'Sexual Harassment', 'Work Related Issues'],
                     chart: {
                         background: '#1F2940',
                         foreColor: '#ffffff',
@@ -28,8 +30,9 @@ function PieChart() {
                     legend: {
                         position: 'bottom'
                     },
+
                     subtitle: {
-                        text: "This is BarChart Graph",
+                        text: "",
                         // style: { color: "pink", fontSize: 8 }
                         // style: { fontSize: 18 },
                     },

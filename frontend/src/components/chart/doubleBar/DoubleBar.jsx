@@ -10,11 +10,12 @@ class DoubleBar extends React.Component {
         this.state = {
 
             series: [{
-                name: 'Net Profit',
-                data: [44, 55, 57, 56, 61]
+                name: 'Male',
+                data: [44, 55, 101, 98, 87, 44, 55, 101, 98, 87, 76]
             }, {
-                name: 'Revenue',
-                data: [76, 85, 101, 98, 87]
+                name: 'Female',
+                data: [76, 57, 56, 61, 76, 85, 85, 45, 57, 56, 61],
+                color: "#FF7E47"
             }],
 
             options: {
@@ -32,6 +33,13 @@ class DoubleBar extends React.Component {
                     },
                 },
 
+                title: {
+                    text: "Gender Wise Type of Grievance Solution",
+
+                    align: "center",
+                    style: { fontSize: 15, color: "white" },
+                },
+
                 dataLabels: {
                     enabled: false
                 },
@@ -41,23 +49,25 @@ class DoubleBar extends React.Component {
                     colors: ['transparent']
                 },
                 xaxis: {
-                    categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    categories: ['PF', 'ESI', 'Wages/Incentive', 'Attendance', 'Workplace Stress', 'Supervisor Behaviour', 'Health & Safety', 'Job Assignment', 'Complaint Again Co-Workers', 'Sexual Harassment', 'Work Related Issues'],
                 },
                 yaxis: {
                     title: {
-                        text: '$ (thousands)'
+                        text: 'Report',
+                        style: { fontSize: 14, color: "white" }
+
                     }
                 },
                 fill: {
                     opacity: 1
                 },
-                tooltip: {
-                    y: {
-                        formatter: function (val) {
-                            return "$ " + val + " thousands"
-                        }
-                    }
-                }
+                // tooltip: {
+                //     y: {
+                //         formatter: function (val) {
+                //             return "$ " + val + " thousands"
+                //         }
+                //     }
+                // }
             },
 
 
@@ -71,7 +81,7 @@ class DoubleBar extends React.Component {
                 <div className="chartContainer">
 
                     <div id="chart">
-                        <Chart options={this.state.options} series={this.state.series} type="bar" width={400} height={300} />
+                        <Chart options={this.state.options} series={this.state.series} type="bar" width={this.props.toggleMenu ? 600 : 700} height={this.props.toggleMenu ? 320 : 400} />
                     </div>
                 </div>
 

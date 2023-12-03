@@ -3,20 +3,22 @@ import Chart from "react-apexcharts"
 
 import "./style.css"
 
-function ChartBar({ data }) {
+function ChartBar({ data, toggleMenu }) {
     return (
         <>
             <div className="chartContainer">
                 <Chart className="chart"
                     type="bar"
-                    width={380}
-                    height={300}
+                    width={toggleMenu ? 400 : 460}
+                    height={toggleMenu ? 310 : 390}
 
 
                     series={[
                         {
                             name: "Resolve",
                             data: data,
+                            // colors: ['#58BDFF', '#FFE15D', '#00DB8F']
+                            color: "#E76CD2"
                             // style: { color: "#00FFFF" },
                         },
 
@@ -34,6 +36,7 @@ function ChartBar({ data }) {
                             toolbar: {
                                 show: false,
                             },
+                            color: "#E76CD2"
                         },
 
                         title: {
@@ -90,12 +93,25 @@ function ChartBar({ data }) {
 
                         legend: {
                             show: true,
-                            position: "right",
+                            // position: "right",
                             toolbar: {
                                 show: false
                             },
+                            // position: 'bottom',
+                            show: false
                         },
 
+                        // dataLabels: {
+                        //     enabled: false
+                        // },
+
+                        colors: ['#BB800D', '#DEDFE3', '#00E396'],
+                        plotOptions: {
+                            bar: {
+                                // horizontal: true,
+                                distributed: true
+                            }
+                        },
 
                         // dataLabels: {
                         //     formatter: (val) => {

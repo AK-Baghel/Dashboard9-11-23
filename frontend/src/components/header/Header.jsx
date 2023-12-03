@@ -11,7 +11,7 @@ import { FaUserAlt } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
 import { useNavigate } from "react-router-dom"
 import { useLocation } from "react-router-dom"
-import { Context } from "../../context/AppContext"
+// import { Context } from "../../context/AppContext"
 
 const Header = ({ toggleMenuHandle, toggleMenu }) => {
 

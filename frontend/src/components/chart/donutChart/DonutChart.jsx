@@ -8,8 +8,8 @@ function Donutchart({ heading, arr, data, colorArr, toggleMenu }) {
             <div className="chartContainer">
                 <Chart
                     type="donut"
-                    width={toggleMenu ? 280 : 340}
-                    height={toggleMenu ? 280 : 340}
+                    width={toggleMenu ? 250 : 300}
+                    height={toggleMenu ? 250 : 300}
                     series={data}
 
                     options={{

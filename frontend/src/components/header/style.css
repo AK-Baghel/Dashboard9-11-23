@@ -210,11 +210,11 @@ body {
     }
 
     .headerLogo {
-        color: black;
+        color: white;
     }
 
     .headerVerticalToggles {
-        color: black;
+        color: white;
     }
 
     .headerVerticalToggleActive {
@@ -227,7 +227,7 @@ body {
         align-items: flex-start;
         justify-content: start;
         position: absolute;
-        background-color: #2929298e;
+        background-color: #141B2D;
         color: rgb(255, 255, 255);
         width: 100%;
         left: 0;

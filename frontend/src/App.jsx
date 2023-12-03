@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import "./App.css"
 import Header from './components/header/Header'
-import About from "./components/home/Home"
+import Home from "./components/home/Home"
 import Dashboard from "./components/dashboard/Dashboard"
 import Methods from "./components/methods/Methods"
 import VerticalHeader from "./components/verticalHeader/VerticalHeader"
@@ -11,9 +11,14 @@ import { useState } from "react"
 
 function App() {
   const [checking, setChecking] = useState(true)
+  const [toggleMenu, setToggleMenu] = useState(true)
 
   const checkLogin = () => {
     setChecking(false)
+  }
+
+  const toggleMenuHandle = () => {
+    setToggleMenu(!toggleMenu);
   }
 
   return (
@@ -26,12 +31,12 @@ function App() {
           :
           <>
             <AppContext>
-              <Header />
+              <Header toggleMenuHandle={toggleMenuHandle} toggleMenu={toggleMenu} />
               <VerticalHeader />
 
-              <div className="appRight">
+              <div className={toggleMenu ? `appRight` : "appLeft"}>
                 <Routes>
-                  <Route path="/" element={<About />} />
+                  <Route path="/" element={<Home toggleMenu={toggleMenu} />} />
                   <Route path="/methods" element={<Methods />} />
                   <Route path="/dashboard" element={<Dashboard />} />
                 </Routes>

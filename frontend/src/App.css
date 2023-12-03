@@ -8,9 +8,11 @@
     overflow-x: hidden;
     width: 84vw;
     left: 16vw;
+    /* transition: all 1s ease; */
 }
 
 .appLeft {
+    /* transition: all 1s ease; */
     background-color: #141B2D;
     font-size: 4rem;
     height: 90vh;

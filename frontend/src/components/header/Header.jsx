@@ -1,6 +1,10 @@
 import React, { useState, useContext } from "react"
 import "./style.css"
 import { FaBars } from "react-icons/fa6"
+import { FaToggleOn } from "react-icons/fa";
+import { FaToggleOff } from "react-icons/fa6";
+
+
 // import { RiArrowDropDownLine } from "react-icons/ri"
 import { AiFillHome } from "react-icons/ai"
 import { FaUserAlt } from "react-icons/fa"
@@ -9,7 +13,7 @@ import { useNavigate } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import { Context } from "../../context/AppContext"
 
-const Header = () => {
+const Header = ({ toggleMenuHandle, toggleMenu }) => {
 
     const location = useLocation();
     const [show, setShow] = useState(true);
@@ -48,7 +52,7 @@ const Header = () => {
                 <div className={`headerAllItem ${show ? "headerMobile " : ""}`}>
                     <div className="headerLeft">
                         <div className="headerVerticalToggle">
-                            <div className={`headerVerticalToggles ${headerVerticalToggle1 ? "headerVerticalToggleActive" : ""}`} onClick={() => { headerVerticalToggle(1) }}><AiFillHome /> Menu</div>
+                            <div className={`headerVerticalToggles ${headerVerticalToggle1 ? "headerVerticalToggleActive" : ""}`} onClick={() => { headerVerticalToggle(1); toggleMenuHandle(); }} ><AiFillHome /> Menu</div>
                             <div className={`headerVerticalToggles ${headerVerticalToggle2 ? "headerVerticalToggleActive" : ""}`} onClick={() => { headerVerticalToggle(2) }}><FaUserAlt /> User</div>
                         </div>
 
@@ -56,6 +60,14 @@ const Header = () => {
                         <div className={`headerItem ${location.pathname === "/" ? "active" : ""}`} onClick={() => { routing("/") }}>Home</div>
                         <div className={`headerItem ${location.pathname === "/methods" ? "active" : ""}`} onClick={() => { routing("/methods") }} >Methods</div>
                         <div className={`headerItem ${location.pathname === "/dashboard" ? "active" : ""}`} onClick={() => { routing("/dashboard") }} >Dashboard</div>
+                        <div className="showDashboard" onClick={toggleMenuHandle}>
+                            {
+                                toggleMenu ?
+                                    <FaToggleOn className="toggleMenu" /> :
+                                    <FaToggleOff className="toggleMenu" />
+
+                            }
+                        </div>
                     </div>
 
                     <div className="headerRight">

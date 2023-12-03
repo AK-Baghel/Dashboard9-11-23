@@ -6,7 +6,7 @@ import { ImPieChart } from "react-icons/im"
 import { Context } from '../../../context/AppContext'
 import "./style.css"
 
-function AboutBox1Tile({ value, heading, logo }) {
+function AboutBox1Tile({ value, heading, logo, toggleMenu }) {
 
     const { totalComplaint, resolvedComplaint, pendingComplaint } = useContext(Context)
     const [count, setCount] = useState(0)
@@ -34,14 +34,15 @@ function AboutBox1Tile({ value, heading, logo }) {
         counter();
     }, [totalComplaint > 0]);
 
+    // console.log('togglemenu', toggleMenu);
 
 
     return (
-        <div className="aboutBox1TileContainer" >
+        <div className={`aboutBox1TileContainer ${!toggleMenu ? "aboutBox1TileContainer2" : ""}`} >
             <div className="aboutBox1TileSection">
-                <div className="aboutBox1TileCount" >{value === 3 ? 0 : count}</div>
+                <div className={`aboutBox1TileCount ${!toggleMenu ? "aboutBox1TileCount2" : ""}`} >{value === 3 ? 0 : count}</div>
                 <div className="aboutBox1TileText">
-                    <div className="aboutBox1TileHeading">{heading}</div>
+                    <div className={`aboutBox1TileHeading ${!toggleMenu ? "aboutBox1TileHeading2" : ""}`}>{heading}</div>
                     {
                         (logo === 1) ? <BsBarChartLineFill className='aboutBox1TileLogo' /> :
                             (logo === 2) ? <BsFillPieChartFill className='aboutBox1TileLogo' /> :

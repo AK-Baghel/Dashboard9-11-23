@@ -1,15 +1,15 @@
 import React from "react";
 import Chart from 'react-apexcharts';
 
-function Donutchart({ heading, arr, data, colorArr }) {
+function Donutchart({ heading, arr, data, colorArr, toggleMenu }) {
 
     return (
         <>
             <div className="chartContainer">
                 <Chart
                     type="donut"
-                    width={280}
-                    height={280}
+                    width={toggleMenu ? 280 : 340}
+                    height={toggleMenu ? 280 : 340}
                     series={data}
 
                     options={{

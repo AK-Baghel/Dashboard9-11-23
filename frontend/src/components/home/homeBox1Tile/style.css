@@ -14,6 +14,11 @@
     user-select: none;
 }
 
+.aboutBox1TileContainer2 {
+    width: 270px;
+    height: 25vh;
+}
+
 .aboutBox1TileLine {
     content: "";
     width: 100%;
@@ -34,11 +39,20 @@
     color: aqua;
 }
 
+.aboutBox1TileCount2 {
+    font-size: 2.4rem;
+}
+
+.aboutBox1TileHeading2 {
+    font-size: 1.1rem;
+}
+
 .aboutBox1TileText {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 
 .aboutBox1TileLogo {
     font-size: 1.2rem;

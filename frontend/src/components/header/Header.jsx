@@ -11,9 +11,11 @@ import { FaUserAlt } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
 import { useNavigate } from "react-router-dom"
 import { useLocation } from "react-router-dom"
-// import { Context } from "../../context/AppContext"
+import { Context } from "../../context/AppContext"
 
 const Header = ({ toggleMenuHandle, toggleMenu }) => {
+
+    const { showMenu } = useContext(Context);
 
     const location = useLocation();
     const [show, setShow] = useState(true);
@@ -52,13 +54,13 @@ const Header = ({ toggleMenuHandle, toggleMenu }) => {
                 <div className={`headerAllItem ${show ? "headerMobile " : ""}`}>
                     <div className="headerLeft">
                         <div className="headerVerticalToggle">
-                            <div className={`headerVerticalToggles ${headerVerticalToggle1 ? "headerVerticalToggleActive" : ""}`} onClick={() => { headerVerticalToggle(1); toggleMenuHandle(); }} ><AiFillHome /> Menu</div>
-                            <div className={`headerVerticalToggles ${headerVerticalToggle2 ? "headerVerticalToggleActive" : ""}`} onClick={() => { headerVerticalToggle(2) }}><FaUserAlt /> User</div>
+                            <div className={`headerVerticalToggles ${headerVerticalToggle1 ? "headerVerticalToggleActive" : ""}`} onClick={() => { headerVerticalToggle(1); showMenu(true) }} ><AiFillHome /> Menu</div>
+                            <div className={`headerVerticalToggles ${headerVerticalToggle2 ? "headerVerticalToggleActive" : ""}`} onClick={() => { headerVerticalToggle(2); showMenu(false) }}><FaUserAlt /> User</div>
                         </div>
 
                         <div className=" headerLogo">VAMANI</div>
                         <div className={`headerItem ${location.pathname === "/" ? "active" : ""}`} onClick={() => { routing("/") }}>Home</div>
-                        <div className={`headerItem ${location.pathname === "/methods" ? "active" : ""}`} onClick={() => { routing("/methods") }} >Methods</div>
+                        {/* <div className={`headerItem ${location.pathname === "/methods" ? "active" : ""}`} onClick={() => { routing("/methods") }} >Methods</div> */}
                         <div className={`headerItem ${location.pathname === "/dashboard" ? "active" : ""}`} onClick={() => { routing("/dashboard") }} >Dashboard</div>
                         <div className="showDashboard" onClick={toggleMenuHandle}>
                             {

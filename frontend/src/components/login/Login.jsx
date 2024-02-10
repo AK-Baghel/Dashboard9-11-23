@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
-
 import { BiSolidUserCircle } from "react-icons/bi"
 import { AiFillLock } from "react-icons/ai"
-import Toast from '../toast/Toast'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import "./style.css"
 
 
-function Login({ checkLogin }) {
+function Login({ checkLogin, checking }) {
 
     const [remember, setRemember] = useState(false);
     const [login, setLogin] = useState("")
     const [password, setPassword] = useState("")
 
     const signIn = async () => {
+
         const data = await fetch("http://localhost:8080/signin", {
             method: "post",
             body: JSON.stringify({ login, password }),
@@ -27,13 +27,25 @@ function Login({ checkLogin }) {
         if (result) {
             checkLogin();
         }
-        else {
 
-        }
+        // if (checking) {
+        //     toast.error(`Invalid Credentials`, {
+        //         position: "top-right",
+        //         autoClose: 5000,
+        //         hideProgressBar: false,
+        //         closeOnClick: true,
+        //         pauseOnHover: true,
+        //         draggable: true,
+        //         progress: undefined,
+        //         theme: "colored",
+        //     });
+        // }
+
     }
 
     return (
         <div className="loginContainer">
+            <ToastContainer />
             <div className="loginBlackShade">
                 <div className="loginSection">
                     <div className="loginHeading">VPulse</div>

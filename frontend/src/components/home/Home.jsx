@@ -45,7 +45,7 @@ function Home({ toggleMenu }) {
             </div> :
             <div className="loaderContainer">
                 <LuLoader className='loaderIcon' />
-                <div className='loaderText'>Wait Please...</div>
+                <div className='loaderText'>Please Wait...</div>
             </div>
     )
 }

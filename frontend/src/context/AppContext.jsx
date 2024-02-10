@@ -16,11 +16,17 @@ function AppContext({ children }) {
     const [day5, setday5] = useState([])
     const [moreThan5Days, setMoreThan5Days] = useState([]);
     const [showDashboard, setShowDashboard] = useState(true)
+
+    const [menu, setmenu] = useState(true)
     // const [yesLogin, setYesLogin] = useState(false)
 
     // const toggleLogin = (value) => {
     //     setYesLogin(value)
     // }
+
+    const showMenu = (value) => {
+        setmenu(value);
+    }
 
     const showDashboardHandle = () => {
         setShowDashboard(!showDashboard);
@@ -124,7 +130,7 @@ function AppContext({ children }) {
 
     return (
         <Context.Provider value={
-            { showDashboard, showDashboardHandle, resolvedComplaint, pendingComplaint, totalComplaint, male, female, day1, day2, day3, day4, day5, moreThan5Days }
+            { menu, showMenu, showDashboard, showDashboardHandle, resolvedComplaint, pendingComplaint, totalComplaint, male, female, day1, day2, day3, day4, day5, moreThan5Days }
         }>
             {children}
         </Context.Provider>

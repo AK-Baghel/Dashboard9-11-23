@@ -1,0 +1,146 @@
+.masterContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    padding-block: 1.5rem;
+}
+
+.masterBox1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: orange;
+}
+
+.masterHeaderBox2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.masterHeaderBox2Sec1 {
+    font-size: 1.2rem;
+    border-bottom: 1px solid #485EC4;
+    padding-block: 0.5rem;
+    text-transform: capitalize;
+
+}
+
+.masterHeaderBox2Sec2 {
+    background-color: #485EC4;
+    width: fit-content;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.8rem 1rem;
+    color: white;
+    transition: 0.3s all ease;
+    text-transform: capitalize;
+}
+
+.masterHeaderBox2Sec2:hover {
+    background-color: #36468f;
+}
+
+.masterHeaderBox3 {
+    display: flex;
+    flex-direction: column;
+    /* overflow-x: scroll; */
+
+}
+
+.masterHeaderBox3Th {
+    display: flex;
+    padding: 0rem 1rem;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.masterHeaderBox3ThItem1 {
+    width: 10%;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 8px 3px;
+    background-color: #1F2940;
+    color: aqua;
+}
+
+.masterHeaderBox3ThItem2 {
+    width: 60%;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 8px 3px;
+    background-color: #1F2940;
+    color: aqua;
+    text-transform: capitalize;
+}
+
+.masterHeaderBox3ThItem3 {
+    width: 30%;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 8px 3px;
+    background-color: #1F2940;
+}
+
+
+
+.masterHeaderBox3Tr {
+    background-color: rgba(255, 0, 0, 0);
+    border-top: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
+    /* width: 10rem; */
+}
+
+.masterHeaderBox3Action {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.masterHeaderEdit {
+    color: rgb(125, 224, 125);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.masterHeaderEdit:hover {
+    color: rgb(0, 163, 0);
+    transform: scale(1.1);
+
+}
+
+.masterHeaderDelete {
+    font-size: 1rem;
+    color: rgb(194, 89, 89);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.masterHeaderDelete:hover {
+    color: rgb(214, 28, 28);
+    transform: scale(1.1);
+}
+
+.masterHeaderBox3TrParent {
+    height: 67vh;
+    overflow-y: scroll;
+}
+
+.masterHeaderBox3TrParent::-webkit-scrollbar {
+    display: none;
+}
+
+.masterHeaderBox3TrGreen {
+    color: greenyellow;
+}

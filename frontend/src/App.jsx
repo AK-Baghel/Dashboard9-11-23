@@ -8,6 +8,7 @@ import VerticalHeader from "./components/verticalHeader/VerticalHeader"
 import Login from "./components/login/Login"
 import AppContext from "./context/AppContext"
 import { useState } from "react"
+import GrievanceData from "./components/grievanceData/GrievanceData"
 
 function App() {
   const [checking, setChecking] = useState(true)
@@ -23,10 +24,11 @@ function App() {
 
   return (
     <>
+
       {
         checking ?
           <AppContext>
-            <Login checkLogin={checkLogin} />
+            <Login checkLogin={checkLogin} checking={checking} />
           </AppContext>
           :
           <>
@@ -39,11 +41,13 @@ function App() {
                   <Route path="/" element={<Home toggleMenu={toggleMenu} />} />
                   <Route path="/methods" element={<Methods />} />
                   <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/grievance" element={<GrievanceData />} />
                 </Routes>
               </div>
             </AppContext>
           </>
       }
+
     </>
   )
 }

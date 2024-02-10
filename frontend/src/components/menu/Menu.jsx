@@ -10,6 +10,7 @@ import { BiSolidCylinder } from "react-icons/bi"
 import { AiFillLike } from "react-icons/ai"
 import { RiArrowDropDownLine } from "react-icons/ri"
 import { RiArrowDropUpLine } from "react-icons/ri"
+import profile from "../../assets/profile.jpg"
 
 import "./style.css"
 
@@ -20,18 +21,18 @@ function Menu() {
     return (
         <div className="menuContainer">
             <div className="menuBox1">
-                <img className='menuImg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRg61kc6vPiirZWJyd1lJ8Zf60uPa4Nlht6A&usqp=CAU" alt="" />
-                <div className="menuName">Virat Kholi</div>
+                <img className='menuImg' src={profile} alt="" />
+                <div className="menuName">Ankit Baghel</div>
             </div>
             <div className="menuLine"></div>
             <div className="menuLists">
                 <div className={`menuList ${location.pathname === "/" ? "menuListActive" : ""}`} onClick={() => { navigate("/") }}><FaHome />Home</div>
-                <div className="menuList"><FaTasks />My Tasks<RiArrowDropDownLine /></div>
-                <div className="menuList"><FaShieldAlt />Policies</div>
+                <div className={`menuList ${location.pathname === "/grievance" ? "menuListActive" : ""}`} onClick={() => { navigate("/grievance") }}><FaTasks />Grievance Report<RiArrowDropDownLine /></div>
+                {/* <div className="menuList"><FaShieldAlt />Policies</div>
                 <div className="menuList"><PiBagFill />Job Profile</div>
                 <div className="menuList"><BiSolidCylinder />Induction</div>
                 <div className="menuList"><BsFillGearFill />Utilities<RiArrowDropDownLine /></div>
-                <div className="menuList"><AiFillLike />Suggestion</div>
+                <div className="menuList"><AiFillLike />Suggestion</div> */}
             </div>
             <footer className='menuFooter'>
                 <div className="menuLine"></div>

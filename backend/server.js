@@ -31,6 +31,9 @@ app.post('/signin', async (req, resp) => {
         if (user) {
             resp.send(user);
         }
+        else {
+            return 0;
+        }
     }
 })
 
